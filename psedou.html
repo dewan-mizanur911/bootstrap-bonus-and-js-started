@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psedou</title>
+    <style>
+        h3::before{
+            content: 'Now ';
+            color: red;
+        }
+        h3:hover::after{
+            content: ',and it ends with this click.';
+            color: red;
+        }
+        blockquote::before{
+            content: open-quote;
+            font-size: 1.5rem;
+            color: red;
+        }
+        blockquote::after{
+            content: close-quote;
+            font-size: 1.5rem;
+            color: red;
+        }
+        h2{
+            display: inline-block;
+        }
+        h2:hover::before,h2:after{
+            content: '';
+            display: block;
+            height: 2px;
+            background-color: red;
+            width: 100%;
+         }
+        .form input:focus:required+span::after {
+            display: inline-block;
+            content: " *required";
+            color: red;
+        }
+        .form input:focus+span::after{
+            content: ' (This is optional)';
+            color: royalblue;
+        }
+        /* .form input::before{
+            display: inline-block;
+            color: red;
+            content: '*';
+        } */
+        #name{
+            margin: 5px 0;
+        }
+        #phone{
+            margin: 0 33px;
+        }
+    </style>
+</head>
+<body>
+    <h3>This is psedou testing</h3>
+    <h4>Here are some famous quotes</h4>
+    <section>
+        <h2>Famous quotes</h2>
+        <blockquote>The purpose of our lives is to be happy.</blockquote>
+        <blockquote>Money and success don’t change people; they merely amplify what is already there.</blockquote>
+    </section>
+    <form action="" class="form">
+        <label for="name">Your Name:</label>
+        <input type="text" name="name" id="name" placeholder="Write your name" required><span></span>
+        <br>
+        <label for="phone">Phone: </label>
+        <input type="text" name="phone" id="phone" placeholder="phone number"><span></span>
+    </form>
+    
+</body>
+</html>
